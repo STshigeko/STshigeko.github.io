@@ -1,92 +1,51 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   margin: 0;
-  font-family: "Hiragino Kaku Gothic ProN";
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", "Mincho", serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .container {
   width: 100%;
+  max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
-.top-wrapper {
-  padding: 180px 0 100px 0;
-  background-image: url(top.png);
-  background-size: cover;
-  color: white;
-  text-align: center;
-}
-
-.top-wrapper h1 {
-  opacity: 0.7;
-  font-size: 45px;
-  letter-spacing: 5px;
-}
-
-.top-wrapper p {
-  opacity: 0.7;
-  font-size: 16px;
-  margin-bottom: 40px;
-}
-
-.btn-wrapper {
-  text-align: center;
-}
-
-.btn-wrapper p {
-  margin-bottom: 20px;
-}
-
-.signup {
-  background-color: #239b76;
-}
-
-.facebook {
-  background-color: #3b5998;
-  margin-right: 10px;
-}
-
-.twitter {
-  background-color: #55acee;
-}
-
-.btn {
-  padding: 8px 24px;
-  color: white;
-  display: inline-block;
-  opacity: 0.8;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.btn:hover {
-  opacity: 1;
-}
-
-.fa {
-  margin-right: 5px;
-}
-
+/* Header */
 header {
   height: 65px;
   width: 100%;
-  background-color: rgba(34,49,52,0.9);
-  position :fixed;
+  background-color: #9fabd7;
+  position: fixed;
   top: 0;
   z-index: 10;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.logo {
-  width: 124px;
-  margin-top: 20px;
+.logo-text {
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 65px;
+  letter-spacing: 2px;
 }
 
 .header-left {
@@ -105,90 +64,12 @@ header {
   display: block;
   float: left;
   transition: all 0.5s;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .header-right a:hover {
-  background-color: rgba(255,255,255,0.3);
-}
-
-.lesson-wrapper {
-  height: 580px;
-  padding-bottom: 80px;
-  padding-left: 5%;
-  padding-right: 5%;
-  background-color: #f7f7f7;
-  text-align: center;
-}
-
-.heading {
-  padding-top: 80px;
-  padding-bottom: 50px;
-  color: #5f5d60;
-}
-
-.heading h2 {
-  font-weight: normal;
-}
-
-.lesson {
-  float: left;
-  width: 25%;
-}
-
-.lesson-icon {
-  position: relative;
-}
-
-.lesson-icon p {
-  position: absolute;
-  top: 37%;
-  width: 100%;
-  color: white;
-}
-
-.text-contents {
-  width: 80%;
-  display: inline-block;
-  margin-top: 15px;
-  font-size: 13px;
-  color: #b3aeb5;
-}
-
-.heading h3 {
-  font-weight: normal;
-}
-
-.message-wrapper {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 80px;
-  text-align: center;
-}
-
-.message {
-  padding: 15px 40px;
-  background-color: #5dca88;
-  cursor: pointer;
-  box-shadow: 0px 7px #1a7940;
-}
-
-.message:active {
-  position: relative;
-  top: 7px;
-  box-shadow: none;
-}
-
-footer img {
-  width: 125px;
-}
-
-footer p {
-  color: #b3aeb5;
-  font-size: 12px;
-}
-
-footer {
-  padding-top: 30px;
-  padding-bottom: 20px;
+  background-color: rgba(255,255,255,0.2);
 }
 
 .menu-icon {
@@ -197,34 +78,298 @@ footer {
   font-size: 25px;
   padding: 21px 0;
   display: none;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+  margin-top: 65px;
+  width: 100%;
+  position: relative;
+}
+
+.top-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Intro Section */
+.intro-section {
+  padding: 80px 0;
+  background-color: white;
+  text-align: center;
+}
+
+.intro-title {
+  font-size: 48px;
+  font-weight: normal;
+  color: #333;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+}
+
+.intro-text {
+  font-size: 20px;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* Content Section */
+.content-section {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.content-wrapper.reverse {
+  flex-direction: row-reverse;
+}
+
+.content-image {
+  flex: 1;
+  width: 50%;
+}
+
+.content-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.content-text {
+  flex: 1;
+  width: 50%;
+}
+
+.content-title {
+  font-size: 36px;
+  font-weight: normal;
+  color: #333;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+
+.content-description {
+  font-size: 20px;
+  color: #333;
+  line-height: 1.8;
+}
+
+.daruma-section {
+  background-color: white;
+}
+
+.standard-section {
+  background-color: white;
 }
 
 .clear {
-  clear: left;
+  clear: both;
 }
 
+/* New Top Section */
+.new-top-section {
+  padding: 80px 0;
+  background-color: white;
+  text-align: center;
+}
+
+.new-top-title {
+  font-size: 48px;
+  font-weight: normal;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+/* Main Content Section */
+.main-content-section {
+  padding: 60px 0 80px;
+  background-color: white;
+}
+
+.main-content-text {
+  font-size: 20px;
+  color: #333;
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* Footer */
+footer {
+  background-color: #9fabd7;
+  color: white;
+  padding: 60px 0 30px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-shop-name {
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.instagram-link {
+  color: white;
+  text-decoration: underline;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.3s;
+}
+
+.instagram-link:hover {
+  opacity: 0.8;
+}
+
+.instagram-link .fa {
+  font-size: 20px;
+}
+
+.footer-center {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-info {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.footer-right {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-phone {
+  font-size: 18px;
+  color: white;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 30px;
+  text-align: center;
+}
+
+.footer-links {
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: underline;
+  font-size: 14px;
+  margin: 0 15px;
+  transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 0.8;
+}
+
+.copyright {
+  font-size: 12px;
+  color: white;
+  margin-top: 15px;
+}
+
+/* Responsive Design */
 @media all and (max-width: 1000px) {
-  .lesson {
-    width: 50%;
-    margin-bottom: 50px;
+  .intro-title {
+    font-size: 36px;
   }
-
-  .lesson-wrapper {
-    height: 990px;
+  
+  .content-title {
+    font-size: 28px;
   }
-
-  footer {
-    text-align: center;
+  
+  .content-wrapper {
+    gap: 40px;
+  }
+  
+  .new-top-title {
+    font-size: 36px;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
   }
 }
 
 @media all and (max-width: 750px) {
-  .top-wrapper h1 {
+  .intro-title {
     font-size: 32px;
   }
-
-  .heading h2 {
-    font-size: 20px;
+  
+  .intro-text {
+    font-size: 18px;
+  }
+  
+  .content-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .content-wrapper.reverse {
+    flex-direction: column;
+  }
+  
+  .content-image,
+  .content-text {
+    width: 100%;
+  }
+  
+  .content-title {
+    font-size: 24px;
+  }
+  
+  .content-description {
+    font-size: 18px;
+  }
+  
+  .new-top-section {
+    padding: 60px 0;
+  }
+  
+  .new-top-title {
+    font-size: 28px;
+  }
+  
+  .main-content-section {
+    padding: 40px 0 60px;
+  }
+  
+  .main-content-text {
+    font-size: 18px;
+  }
+  
+  .footer-shop-name {
+    font-size: 28px;
   }
 }
 
@@ -236,36 +381,60 @@ footer {
   .menu-icon {
     display: block;
   }
-
-  .top-wrapper .btn {
-    width: 100%;
-  }
-
-  .twitter {
-    margin-top: 10px;
-  }
-
-  .top-wrapper {
-    text-align: left;
-  }
-
-  .top-wrapper h1 {
+  
+  .logo-text {
     font-size: 24px;
   }
-
-  .top-wrapper p {
-    font-size: 14px;
+  
+  .intro-section {
+    padding: 60px 0;
   }
-
-  .lesson {
-    width: 100%;
+  
+  .intro-title {
+    font-size: 28px;
   }
-
-  .lesson-wrapper {
-    height: 1700px;
+  
+  .content-section {
+    padding: 60px 0;
   }
-
-  .message-wrapper .btn {
-    width: 100%;
+  
+  .new-top-section {
+    padding: 50px 0;
+  }
+  
+  .new-top-title {
+    font-size: 24px;
+  }
+  
+  .main-content-section {
+    padding: 30px 0 50px;
+  }
+  
+  .main-content-text {
+    font-size: 16px;
+  }
+  
+  footer {
+    padding: 40px 0 20px;
+  }
+  
+  .footer-shop-name {
+    font-size: 24px;
+  }
+  
+  .footer-info,
+  .footer-phone {
+    font-size: 16px;
+  }
+  
+  .footer-links a {
+    font-size: 12px;
+    margin: 0 10px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .copyright {
+    font-size: 11px;
   }
 }
