@@ -76,7 +76,7 @@ a {
 }
 
 header {
-  height: 65px;
+  height: 90px;
   width: 100%;
   background-color: rgba(34,49,52,0.9);
   position :fixed;
@@ -86,24 +86,39 @@ header {
 
 .logo {
   width: 124px;
-  margin-top: 20px;
+  margin-top: 0; /* 元は 20px — 削除して中央揃えに */
+  align-self: center;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
 }
 
 .header-left {
-  float: left;
+  float: none;
+  font-size: 30px;
+  color: white; 
 }
 
 .header-right {
-  float: right;
-  margin-right: -25px;
+  float: none;
+  /* margin-right: -25px; */ /* 必要なら削除 */
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .header-right a {
-  line-height: 65px;
+  line-height: normal; /* 固定 line-height を解除 */
   padding: 0 25px;
   color: white;
-  display: block;
-  float: left;
+  display: flex;
+  align-items: center;
+  height: 90px;
+  float: none; /* float があると flex の中央揃えを妨げるため解除 */
   transition: all 0.5s;
 }
 
